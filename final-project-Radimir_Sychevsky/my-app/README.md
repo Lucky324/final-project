@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# HOW TO START
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+clone repository typing **`git clone https://github.com/Lucky324/final-project.git`**
 
-## Available Scripts
+open directory 'my-app'
 
-In the project directory, you can run:
+type **`npm install`**
 
-### `yarn start`
+type **`npm install -g json-server`**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Start server typing **`json-server --watch db.json --port 3001`**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Then start typing **`npm start`**
 
-### `yarn test`
+---
+# TASK DESCRIPTION
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Final project
 
-### `yarn build`
+Это последнее задание в курсе. Дедлайн - **25.11**!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Для выполнения этого ДЗ Вам понадобятся следующие npm-пакеты:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* react
+* react-dom
+* react-router-dom
+* webpack
+* json-server
+* redux
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Выше описаны только самые необходимые пакеты, вероятно в процессе выполнения выяснится, что необходимо что-то еще.
 
-### `yarn eject`
+**Задание**. Необходимо создать приложение `pokedex`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Общие требования:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Пагинация**. Может быть реализована любым способом: 
+    * Кнопка "Load more", которая подгружает следующую страницу в общий список
+    * Endless scroll. Принцип тот же, что и у load more за исключеним того, что следующая порция должна подгружаться автоматически при достижении конца страницы.
+    * Традиционная пагинация с номерами страниц
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. **Адаптивный дизайн**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. **Должна присутствовать навигация (меню).**
 
-## Learn More
+4. **Желательно воспользоваться redux для state management**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Требования:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Главная страница**. Здесь должен выводиться список покемонов плашками. В каждой плашке должна быть картинка покемона, его имя и кнопка "Поймать". Если покемон уже пойман - кнопка должна быть `disabled`. При нажатии на покемона - нужно переходить на страничку покемона.
 
-### Code Splitting
+2. **Страница покемона**. Здесь должна выводится информация по указанному покемону: id, имя, картинка, статус (пойман или нет). Если покемон пойман, то нужно еще показывать дату его поимки.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Пойманные покемоны**. Здесь логика точно такая же, как и на главной странице, за исключением того, что выводиться должны только пойманные покемоны.
 
-### Analyzing the Bundle Size
+### Рекомендации
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Используйте какой-нибудь css-framework, чтобы верстка заняла минимум времени.
 
-### Making a Progressive Web App
+2. Пойманных покемонов лучше выносить в отдельную коллекцию и затем связывать их средствами json-server. Подробности можно найти в документации.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Постарайтесь показать себя во всей красе. Если есть какой-то опыт с дополнительными пакетами, не указанными в списке - не стесняйтесь их использовать.
 
-### Advanced Configuration
+4. Приветствуется создание доступного интерфейса.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+5. Постарайтесь построить хорошую архитектуру приложения. Как минимум, стоит отделить бизнес-логику приложения от ее презентационного слоя (`view`).
 
-### Deployment
+6. Приветствуется покрытие unit-тестами.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+7. Поддержка браузеров: последние версии современных браузеров, ie 11
 
-### `yarn build` fails to minify
+### Примечание
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Картинки покемонов и `db.json` для `json-server` можно найти в этом репозитории.
+
+### Если не любите покемонов
+
+Если есть особая нетерпимость к покемонам, то можно воспользоваться любым понравившимся api и реализовать все фичи из задания (функциональность по поимке покемона можно заменить закладками, лайками и т.п.)
