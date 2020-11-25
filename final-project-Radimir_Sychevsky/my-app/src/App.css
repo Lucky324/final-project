@@ -1,0 +1,51 @@
+.pokedex{
+  min-width: 300px;
+  background-color: lightblue;
+}
+.pokedex_header{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  width: 100vw;
+  position: fixed;
+}
+.pokemon-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.poke-list_item{
+  background-color: #ffe517;
+  height: 270px;
+  width: 220px;
+  margin: 20px;
+  border: 2px solid #4c50ed;
+  border-radius: 10px;
+}
+.poke-list_item_button{
+  display: flex;
+  justify-content: center;
+}
+.poke-list_item_name{
+  display: flex;
+  justify-content: center;
+}
+.pokemon-image{
+  width: 100%;
+  height: 100%;
+}
+.item-list_load{
+  display: flex;
+  justify-content: center;
+}
+.pokemon-page__image{
+  height: 270px;
+  width: 220px;
+}
+.button{
+  border: none;
+  outline: none;
+  background-color: #ffe517;
+  border: 3px solid #ffc01f;
+  border-radius: 10px;
+}
