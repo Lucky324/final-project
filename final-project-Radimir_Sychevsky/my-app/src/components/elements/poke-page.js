@@ -22,8 +22,8 @@ export default class PokemonPage extends React.Component {
     render() {
         if(this.state.isLoad){
             return(
-                <div>
-                    <h1>{this.state.name}</h1>
+                <div className='pokemon-page'>
+                    <h1 className='pokemon-page__name'>{this.state.name}</h1>
                     <div className='pokemon-page__image'>
                         <PokemonImage id={this.state.id}/>
                     </div>

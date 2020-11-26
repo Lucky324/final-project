@@ -1,4 +1,4 @@
-.pokedex{
+body{
   min-width: 300px;
   background-color: lightblue;
 }
@@ -38,9 +38,13 @@
   display: flex;
   justify-content: center;
 }
+.pokemon-page{
+  padding-top: 5px;
+  margin-left: 20px;
+}
 .pokemon-page__image{
   height: 270px;
-  width: 220px;
+  width: 260px;
 }
 .button{
   border: none;
